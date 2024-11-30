@@ -2,31 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-@keyframes typing {
-  0% {
-    width: 0; /* Start with no text visible */
-  }
-  30% {
-    width: 10ch; /* Match the width of the text (10 characters here) */
-  }
-  90% {
-    width: 10ch; /* Hold the text fully visible */
-  }
-  100% {
-    width: 0; /* Reset back to no text visible */
-  }
+/* Custom Scrollbar Styling with Padding */
+.scrollbar-custom::-webkit-scrollbar {
+  width: 12px; /* Adjust width */
 }
 
-@keyframes blink {
-  50% {
-    border-color: transparent; /* Cursor disappears */
-  }
+.scrollbar-custom::-webkit-scrollbar-track {
+  background: #2d3748; /* Dark background for the track */
+  border-radius: 10px; /* Rounded track */
 }
 
-.typing-effect {
-  display: inline-block;
-  white-space: nowrap;
-  overflow: hidden; /* Hide the text overflow to create the typing effect */
-  border-right: 2px solid white; /* Add a solid cursor */
-  animation: typing 3s steps(10) infinite, blink 0.75s step-end infinite;
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background: #4a5568; /* Slightly lighter thumb color */
+  border-radius: 10px; /* Rounded scrollbar */
+  border: 3px solid transparent; /* Adds padding around the thumb */
+  background-clip: padding-box; /* Ensures the border is outside the thumb */
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb:hover {
+  background: #2f855a; /* Hover effect for the thumb */
+}
+
+.filter-white {
+  filter: brightness(0) saturate(100%) invert(1);
 }
