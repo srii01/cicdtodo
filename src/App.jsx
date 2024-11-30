@@ -229,7 +229,7 @@ function App() {
         <div className="sm:hidden fixed bottom-0 left-0 right-0 bg-gray-800 text-white flex justify-around items-center h-14 shadow-lg">
           {/* LinkedIn Button */}
           <a
-            href="https://www.linkedin.com"
+            href="https://www.linkedin.com/in/abhiram-ys-8a3a2b266/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex flex-col items-center text-sm"
@@ -244,7 +244,7 @@ function App() {
 
           {/* GitHub Button */}
           <a
-            href="https://github.com"
+            href="https://github.com/Abhiram241"
             target="_blank"
             rel="noopener noreferrer"
             className="flex flex-col items-center text-sm"
