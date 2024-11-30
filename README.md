@@ -29,7 +29,7 @@ Make sure you have the following installed on your machine:
 - [Node.js](https://nodejs.org/) (for running the app locally)
 - [npm](https://www.npmjs.com/) (Node package manager)
 
-## Installation
+## Installation and Running
 
 1. Clone this repository to your local machine:
 
