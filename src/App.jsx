@@ -119,8 +119,9 @@ function App() {
             {/* Header */}
             <div className="addtodo">
               <h2 className="text-2xl sm:text-3xl font-bold text-center">
-                Plan Your Day
+                Start Planning
               </h2>
+
               <div className="flex flex-col sm:flex-row lg:gap-0 gap-4 items-center justify-center mt-5">
                 {/* Input */}
                 <input
