@@ -1,4 +1,4 @@
 @echo off
 git add .
-git commit -m "demo testing"
+git commit -m "removed workflow"
 git push
