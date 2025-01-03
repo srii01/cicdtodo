@@ -21,8 +21,14 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      # Comment or remove the test step if no test script is defined
       - name: Run tests
-        run: npm test # Ensure you have test scripts defined in package.json. If not, comment this step.
+        run: |
+          if [ -f package.json ] && grep -q '"test"' package.json; then
+            npm test
+          else
+            echo "No test script defined in package.json"
+          fi
 
       - name: Build Vite app
         run: npm run build
