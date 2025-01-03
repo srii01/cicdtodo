@@ -119,7 +119,7 @@ function App() {
             {/* Header */}
             <div className="addtodo">
               <h2 className="text-2xl sm:text-3xl font-bold text-center">
-                Begin Your Day
+                Plan Your Day
               </h2>
               <div className="flex flex-col sm:flex-row lg:gap-0 gap-4 items-center justify-center mt-5">
                 {/* Input */}
@@ -205,14 +205,14 @@ function App() {
                         <div className="flex gap-4">
                           <button onClick={() => handleEdit(item.id)}>
                             <img
-                              src="/edit.svg"
+                              src="./edit.svg"
                               alt="Edit"
                               className="w-5 h-5 sm:w-6 sm:h-6 hover:scale-110 transition-all duration-300"
                             />
                           </button>
                           <button onClick={() => handleDelete(item.id)}>
                             <img
-                              src="/delete.svg"
+                              src="./delete.svg"
                               alt="Delete"
                               className="w-5 h-5 sm:w-6 sm:h-6 hover:scale-110 transition-all duration-300"
                             />
@@ -235,7 +235,7 @@ function App() {
             className="flex flex-col items-center text-sm"
           >
             <img
-              src="/linkedin.svg"
+              src="./linkedin.svg"
               alt="LinkedIn"
               className="w-6 h-6 filter-white"
             />
@@ -250,7 +250,7 @@ function App() {
             className="flex flex-col items-center text-sm"
           >
             <img
-              src="/github.svg"
+              src="./github.svg"
               alt="GitHub"
               className="w-6 h-6 filter-white"
             />

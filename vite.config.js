@@ -1,10 +1,8 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
-// https://vite.dev/config/
-// vite.config.js
+// Replace 'repository-name' with the actual name of your GitHub repository
 export default defineConfig({
+  base: "/cicdtodo/", // This should be the path relative to your GitHub Pages
   plugins: [react()],
-  base: '/cicdtodo/',  // Replace <repository-name> with your repo name
 });
-

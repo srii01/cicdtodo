@@ -17,7 +17,7 @@ const Navbar = () => {
           className="logo flex gap-3 select-none p-3 cursor-pointer text-orange-500 font-mono font-extrabold text-xl mx-8 my-auto"
           onClick={togglePopup}
         >
-          <img src="/appicon.svg" alt="" />
+          <img src="./appicon.svg" alt="" />
           NextUP
         </h1>
 
@@ -29,7 +29,7 @@ const Navbar = () => {
               href="https://www.linkedin.com/in/abhiram-ys-8a3a2b266/"
               rel="noopener noreferrer"
             >
-              <img src="/linkedin_orange.svg" alt="" className="w-4 y-4" />
+              <img src="./linkedin_orange.svg" alt="" className="w-4 y-4" />
               <div className="text mt-1">LinkedIn</div>
             </a>
           </li>
@@ -41,7 +41,7 @@ const Navbar = () => {
               className="h-10 flex gap-2 items-center bg-gradient-to-r from-slate-700 to-slate-900 transition-all duration-300 hover:scale-110 cursor-pointer font-mono font-thin border-2 border-orange-500 p-4 rounded-lg text-orange-500"
               rel="noopener noreferrer"
             >
-              <img src="/github_orange.svg" alt="" className="w-4 y-4 filter" />
+              <img src="./github_orange.svg" alt="" className="w-4 y-4 filter" />
               <div className="text mt-1">Github</div>
             </a>
           </li>
