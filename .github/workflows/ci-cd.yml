@@ -28,7 +28,7 @@ jobs:
       - name: Build Vite app
         run: npm run build
 
-deploy:
+  deploy:
   needs: build
   runs-on: ubuntu-latest
 
