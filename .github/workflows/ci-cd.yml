@@ -28,31 +28,35 @@ jobs:
       - name: Build Vite app
         run: npm run build
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
+deploy:
+  needs: build
+  runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+  steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16 # Ensure this matches your project’s requirements
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16 # Ensure this matches your project’s requirements
 
-      - name: Install dependencies
-        run: npm install
+    - name: Install dependencies
+      run: npm install
 
-      - name: Build Vite app
-        run: npm run build
+    - name: Build Vite app
+      run: npm run build
 
-      - name: Configure Git identity
-        run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "yadatoreabhiram@gmail.com"
+    - name: Configure Git identity
+      run: |
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "example_valid@gmail.com"
 
-      - name: Deploy to GitHub Pages
-        run: npm run deploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Set up GitHub authentication
+      run: |
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+
+    - name: Deploy to GitHub Pages
+      run: npm run deploy
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
