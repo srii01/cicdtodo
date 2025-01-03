@@ -1,4 +1,4 @@
-name: CI/CD for React App
+name: CI/CD for Vite React App
 
 on:
   push:
@@ -10,19 +10,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: 16
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16 # Ensure this matches your project’s requirements
 
-    - name: Install dependencies
-      run: npm install
+      - name: Install dependencies
+        run: npm install
 
-    - name: Run tests
-      run: npm test
+      - name: Run tests
+        run: npm test # Ensure you have test scripts defined in package.json. If not, comment this step.
 
-    - name: Build React app
-      run: npm run build
+      - name: Build Vite app
+        run: npm run build
