@@ -41,7 +41,11 @@ const Navbar = () => {
               className="h-10 flex gap-2 items-center bg-gradient-to-r from-slate-700 to-slate-900 transition-all duration-300 hover:scale-110 cursor-pointer font-mono font-thin border-2 border-orange-500 p-4 rounded-lg text-orange-500"
               rel="noopener noreferrer"
             >
-              <img src="./github_orange.svg" alt="" className="w-4 y-4 filter" />
+              <img
+                src="./github_orange.svg"
+                alt=""
+                className="w-4 y-4 filter"
+              />
               <div className="text mt-1">Github</div>
             </a>
           </li>
@@ -58,7 +62,7 @@ const Navbar = () => {
             onClick={(e) => e.stopPropagation()} // Prevents closing the popup when clicking inside it
           >
             <h2 className="text-2xl font-bold text-blue-500 mb-4">
-              Welcome to NextUP!
+              Welcome <a href="./golden_logo.png">to</a> NextUP!
             </h2>
             <p className="text-white">
               Boost your productivity with NextUP! 🚀 Stay organized, crush

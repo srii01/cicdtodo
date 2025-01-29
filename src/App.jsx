@@ -117,7 +117,7 @@ function App() {
             container mx-auto mt-10 sm:mt-20 mb-5 rounded-xl p-5 w-[90%] sm:w-3/4 lg:w-1/2 text-gray-100 select-none border-2 border-orange-500"
           >
             {/* Header */}
-            <div className="addtodo">
+            <div className="add todo">
               <h2 className="text-2xl sm:text-3xl font-bold text-center">
                 Plan Your Day
               </h2>
