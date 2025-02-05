@@ -3,14 +3,11 @@ import Navbar from "./Components/Navbar";
 import { v4 as uuidv4 } from "uuid";
 
 function App() {
-  const [todo, setTodo] = useState("");
-  const [todos, setTodos] = useState([]);
-  const [editId, setEditId] = useState(null);
-  const inputRef = useRef(null); // Create a ref for the input field
+  const [todo, setTodo] = useState(""); //you are using a state to capture a string
+  const [todos, setTodos] = useState([]); //init an empty array
+  const [editId, setEditId] = useState(null); // to edit u will need to fetch its id
+  const inputRef = useRef(null); // You will use this to highlight the feild
   const [showfinished, setshowfinished] = useState(false);
-  const saveToLocalStorage = (e) => {
-    localStorage.setItem("todos", JSON.stringify(todos));
-  };
 
   useEffect(() => {
     let todoString = localStorage.getItem("todos");
@@ -22,10 +19,10 @@ function App() {
 
   const handleEdit = (id) => {
     const index = todos.findIndex((item) => item.id === id);
-    console.log(`the ans is ${index}`);
 
     if (index !== -1) {
       const todoToEdit = todos[index];
+
       setTodo(todoToEdit.todo); // Populate input field with the existing todo text
       setEditId(id); // Track the id of the todo being edited
       inputRef.current.focus(); // Focus the input field
@@ -49,12 +46,8 @@ function App() {
   const handleChange = (e) => {
     setTodo(e.target.value);
   };
-  // const handleAdd = (e) => {
-  //   if (todo != "") {
-  //     setTodos([...todos, { id: uuidv4(), todo, isCompleted: false }]);
-  //     setTodo("");
-  //   }
-  // };
+
+  //Use this To create and modify the inputs
   const handleAdd = () => {
     if (todo.trim() === "") return;
 
