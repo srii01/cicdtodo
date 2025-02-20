@@ -1,0 +1,3 @@
+[submodule "cicdtodolist"]
+	path = cicdtodolist
+	url = https://github.com/your-username/cicdtodolist.git
